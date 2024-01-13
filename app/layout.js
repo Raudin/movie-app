@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar'
 import './globals.css'
 import { Montserrat } from "next/font/google"
 import Footer from '@/components/Footer'
+import { Analytics } from '@vercel/analytics/react'
 
 const montserrat = Montserrat({
   weight: ["400"],
@@ -26,7 +27,8 @@ export default function RootLayout({ children }) {
         </div>
         <div className='flex justify-center'>
           <Footer />
-        </div>         
+        </div> 
+        <Analytics />        
       </body>
     </html>
   )
