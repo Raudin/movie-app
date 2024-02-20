@@ -10,8 +10,8 @@ export default function Movie({ title, release_date, poster_path, id }) {
         <a className="block relative overflow-hidden">
           <Image
             src={imagePath + poster_path}
-            width={800}
-            height={800}
+            width={1000}
+            height={1000}
             alt={title}
             priority
             className="w-full h-full object-cover"
