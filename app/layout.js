@@ -1,9 +1,16 @@
+import { Metadata } from 'next'
 import Navbar from '@/components/Navbar'
 import './globals.css'
 import { Montserrat } from "next/font/google"
 import Footer from '@/components/Footer'
 import { Analytics } from '@vercel/analytics/react'
 import head from './head'
+
+export const metadata = {
+  title: 'Movie Buzz',
+  description: "Showcasing the most popular movies currently capturing audiences"
+};
+
 
 const montserrat = Montserrat({
   weight: ["400"],
