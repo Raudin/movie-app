@@ -20,7 +20,7 @@ export default function Movie({ title, release_date, poster_path, id }) {
       </Link>
       <div className="bg-black p-4">
         <h2 className="text-lg font-medium">{title}</h2>
-        <p className="text-gray-500 text-sm">{release_date}</p>
+        <p className="text-gray-300 text-sm">{release_date}</p>
       </div>
     </div>
   );
