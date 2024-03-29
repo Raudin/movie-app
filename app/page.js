@@ -1,6 +1,7 @@
 "use client"
 import { useState, useEffect } from "react";
 import Movie from "../components/Movie";
+import Lenis from "@studio-freight/lenis"
 
 export default function Home() {
   const [currentPage, setCurrentPage] = useState(1);
@@ -21,6 +22,17 @@ export default function Home() {
   useEffect(() => {
     fetchMovies();
   }, []);
+
+  useEffect( () => {
+    const lenis = new Lenis()
+
+    function raf(time) {
+      lenis.raf(time)
+      requestAnimationFrame(raf)
+    }
+
+    requestAnimationFrame(raf)
+  },[] )
 
   return (
     <main className="px-4 py-10 sm:px-6 lg:px-8">
