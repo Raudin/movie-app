@@ -24,7 +24,11 @@ export default function Home() {
   }, []);
 
   useEffect( () => {
-    const lenis = new Lenis()
+    const lenis = new Lenis({
+      duration: 1.2,
+      easing: (t) => t * (2 - t),
+      smooth: true
+    })
 
     function raf(time) {
       lenis.raf(time)
